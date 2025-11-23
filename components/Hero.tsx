@@ -31,7 +31,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
         style={{ transform: `translateY(${offsetY * 0.2}px)` }} // Parallax on text
       >
         
-        <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <div className="flex items-center justify-center space-x-4 mb-6">
                 <div className="h-px w-12 md:w-24 bg-gradient-to-r from-transparent to-gold-500"></div>
                 <span className="text-gold-400 text-xs md:text-sm uppercase tracking-[0.4em] font-serif">Est. 2015 • Krasnoyarsk</span>
@@ -39,18 +39,18 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
             </div>
         </div>
 
-        <h1 className="font-display text-6xl md:text-9xl text-stone-100 font-bold mb-4 leading-none tracking-tighter opacity-0 animate-fade-in-up shadow-lg" style={{ animationDelay: '0.5s' }}>
+        <h1 className="font-display text-6xl md:text-9xl text-stone-100 font-bold mb-4 leading-none tracking-tighter animate-fade-in-up shadow-lg" style={{ animationDelay: '0.5s' }}>
           Страж
         </h1>
-        <h1 className="font-display text-6xl md:text-9xl text-gold-500 font-light italic mb-8 leading-none tracking-tight opacity-0 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
+        <h1 className="font-display text-6xl md:text-9xl text-gold-500 font-light italic mb-8 leading-none tracking-tight animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
           Севера
         </h1>
 
-        <p className="text-stone-200 text-lg md:text-2xl max-w-2xl mb-12 font-serif italic leading-relaxed opacity-0 animate-fade-in-up drop-shadow-md" style={{ animationDelay: '1s' }}>
+        <p className="text-stone-200 text-lg md:text-2xl max-w-2xl mb-12 font-serif italic leading-relaxed animate-fade-in-up drop-shadow-md" style={{ animationDelay: '1s' }}>
           "Величие древних королей в сердце Сибири."
         </p>
         
-        <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '1.3s' }}>
+        <div className="animate-fade-in-up" style={{ animationDelay: '1.3s' }}>
             <button 
                 onClick={() => scrollToSection(Section.HISTORY)}
                 className="group relative px-10 py-4 border border-gold-500/50 overflow-hidden transition-colors hover:border-gold-400"
