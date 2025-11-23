@@ -27,14 +27,16 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐺</text></svg>">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Ruslan+Display&display=swap" rel="stylesheet">
     
-    <!-- Локальное подключение шрифта -->
+    <!-- Подключаем шрифты Google: Playfair, Lato, Cormorant (как запасной вариант) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
     <style>
+      /* Подключение локального шрифта. 
+         Файл должен лежать в папке public/fonts/NewCyrillicGoth.ttf */
       @font-face {
         font-family: 'NewCyrillicGoth';
-        /* Используем ./ для явного указания текущей директории и ?v=1 для сброса кэша */
-        src: url('./fonts/NewCyrillicGoth.ttf?v=1') format('truetype');
+        src: url('./fonts/NewCyrillicGoth.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
         font-display: swap;
@@ -46,15 +48,14 @@
         theme: {
           extend: {
             fontFamily: {
-              // Здесь мы настраиваем имена шрифтов для использования в классах
               serif: ['"Playfair Display"', 'serif'],
               sans: ['"Lato"', 'sans-serif'],
               display: ['"Cormorant Garamond"', 'serif'],
               
-              // Используем локальный NewCyrillicGoth
-              gothic: ['"NewCyrillicGoth"', 'cursive', 'serif'], 
-              
-              ruslan: ['"Ruslan Display"', 'cursive'],
+              // Основной готический шрифт - локальный NewCyrillicGoth.
+              // Если он не загрузится, будет использован Cormorant Garamond (антиква),
+              // который выглядит исторично и гораздо лучше стандартного шрифта.
+              gothic: ['"NewCyrillicGoth"', '"Cormorant Garamond"', 'serif'], 
             },
             colors: {
               emerald: {
