@@ -28,7 +28,19 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Ruslan+Display&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/new-cyrillic-goth" rel="stylesheet">
+    
+    <!-- Удалена ссылка на cdnfonts, добавлено локальное подключение -->
+    <style>
+      @font-face {
+        font-family: 'NewCyrillicGoth';
+        /* Убран начальный слеш для корректной работы на GitHub Pages */
+        src: url('fonts/NewCyrillicGoth.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+
     <script>
       tailwind.config = {
         theme: {
@@ -39,7 +51,7 @@
               sans: ['"Lato"', 'sans-serif'],
               display: ['"Cormorant Garamond"', 'serif'],
               
-              // Используем NewCyrillicGoth для готического стиля
+              // Используем локальный NewCyrillicGoth
               gothic: ['"NewCyrillicGoth"', 'cursive', 'serif'], 
               
               ruslan: ['"Ruslan Display"', 'cursive'],
