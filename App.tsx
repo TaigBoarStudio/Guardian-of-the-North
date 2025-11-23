@@ -5,7 +5,6 @@ import HistorySection from './components/HistorySection';
 import BreedInfo from './components/BreedInfo';
 import DogGallery from './components/DogGallery';
 import PuppySection from './components/PuppySection';
-import AIConsultant from './components/AIConsultant';
 import { Section } from './types';
 
 const App: React.FC = () => {
@@ -44,9 +43,6 @@ const App: React.FC = () => {
           <PuppySection />
         </section>
       </main>
-
-      {/* The AI Widget lives outside the flow */}
-      <AIConsultant />
     </div>
   );
 };
